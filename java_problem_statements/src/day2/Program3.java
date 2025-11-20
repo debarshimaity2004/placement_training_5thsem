@@ -68,20 +68,14 @@ import java.util.Scanner;
 
 class Shape {
     int length, breadth, height, radius;
-
-    // Constructor for Cube
     public Shape(int length, int breadth, int height) {
         this.length = length;
         this.breadth = breadth;
         this.height = height;
     }
-
-    // Constructor for Sphere
     public Shape(int radius) {
         this.radius = radius;
     }
-
-    // Constructor for Cylinder
     public Shape(int radius, int height) {
         this.radius = radius;
         this.height = height;
