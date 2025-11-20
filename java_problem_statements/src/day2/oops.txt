@@ -1,0 +1,5 @@
+OOPS
+1)encapsulation
+2)inheritence
+3)polymorphism
+4)abstraction
