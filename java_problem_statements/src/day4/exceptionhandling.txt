@@ -1,0 +1,116 @@
+Here is a clear and concise note on **Exception Handling in Java**:
+
+---
+
+## **Exception Handling in Java**
+
+Exception handling in Java is a mechanism used to handle runtime errors, ensuring the normal flow of a program. Instead of the program terminating abruptly when an error occurs, Java allows the developer to catch and manage these errors gracefully.
+
+---
+
+### **1. What is an Exception?**
+
+An **exception** is an event that occurs during program execution and disrupts the normal flow of instructions.
+Examples: division by zero, invalid array index, null pointer access.
+
+**Types of Exceptions:**
+
+1. **Checked Exceptions** – Checked at compile time (e.g., IOException, SQLException).
+2. **Unchecked Exceptions** – Occur at runtime (e.g., ArithmeticException, NullPointerException).
+3. **Errors** – Serious issues not handled by programs (e.g., OutOfMemoryError).
+
+---
+
+### **2. Exception Handling Keywords**
+
+Java uses five keywords for handling exceptions:
+
+#### **try**
+
+Block where exceptions are monitored.
+
+```java
+try {
+   int a = 10 / 0;
+}
+```
+
+#### **catch**
+
+Block that handles the exception.
+
+```java
+catch (ArithmeticException e) {
+   System.out.println("Cannot divide by zero");
+}
+```
+
+#### **finally**
+
+Block that always executes, whether an exception occurs or not.
+Useful for closing resources (files, databases).
+
+```java
+finally {
+   System.out.println("Cleanup code executed");
+}
+```
+
+#### **throw**
+
+Used to explicitly throw an exception.
+
+```java
+throw new IllegalArgumentException("Invalid input");
+```
+
+#### **throws**
+
+Used in method declaration to indicate that the method may throw an exception.
+
+```java
+void myMethod() throws IOException {
+   // code
+}
+```
+
+---
+
+### **3. Exception Handling Mechanism**
+
+when an exception occurs:
+
+1. The program stops executing the normal flow.
+2. The exception object is created.
+3. Java searches for a matching `catch` block.
+4. If found → exception is handled.
+   If not → program terminates with an error.
+
+---
+
+### **4. Multiple Catch Blocks**
+
+A single `try` block can have multiple `catch` blocks.
+
+```java
+try {
+   int arr[] = new int[5];
+   arr[10] = 20;
+}
+catch (ArrayIndexOutOfBoundsException e) {
+   System.out.println("Index error");
+}
+catch (Exception e) {
+   System.out.println("General error");
+}
+```
+
+---
+
+### **5. Importance of Exception Handling**
+
+* Prevents program crashes
+* Improves error reporting
+* Makes programs more robust
+* Helps handle unexpected situations safely
+
